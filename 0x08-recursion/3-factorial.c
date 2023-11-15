@@ -1,22 +1,24 @@
 #include "main.h"
 
 /**
- * main- recursion
-*/
+ * factorial - returns the factorial of a given number
+ * @n: factorial to be returned.
+ *
+ * Return: -1 if n is lower than 0
+ * 1 if n is 0
+ * value of n factorial otherwise
+ */
 
-int factorial(int n) {
-    if (n== 1 || n == 0) {
-        return 1;
-    }
-
-    return n * factorial(n - 1);
-}
-
-int main() {
-    int n;
-    int result;
-    n = 5;
-    result = factorial(n);
-    printf("Factorial of %d is %d!\n", n, result);
-    return 0;
+int factorial(int n)
+{
+	if (n < 0)
+	{
+		return (-1);
+	}
+	else if (n == 0)
+	{
+		return (1);
+	}
+	else
+		return (n * factorial(n - 1));
 }
